@@ -27,16 +27,18 @@ async def run_setup(session: SetupSession) -> None:
                 ConfigEntry(
                     key="instructions",
                     type=ConfigEntryType.LABEL,
-                    label=(
-                        "In Libby, generate an 8-digit setup code for another device, "
-                        "then enter it below. The setup code is temporary and is not stored."
+                    required=False,
+                    description=(
+                        "In Libby, generate an 8-digit setup code for another device. "
+                        "The temporary code is used only to link this provider and is not stored."
                     ),
                 ),
                 ConfigEntry(
                     key=CONF_SETUP_CODE,
-                    type=ConfigEntryType.STRING,
-                    label="Libby setup code",
+                    type=ConfigEntryType.PAIRING_CODE,
                     required=True,
+                    format="########",
+                    description="Enter the 8-digit setup code shown by Libby.",
                 ),
             ],
             step_id="authenticate",
