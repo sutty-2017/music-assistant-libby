@@ -1,0 +1,12 @@
+{
+  "type": "music",
+  "domain": "libby",
+  "stage": "experimental",
+  "name": "Libby",
+  "description": "Access currently borrowed Libby/OverDrive audiobooks in Music Assistant.",
+  "codeowners": ["@sutty-2017"],
+  "credits": ["[odmpy](https://github.com/ping/odmpy)"],
+  "requirements": [],
+  "documentation": "https://github.com/sutty-2017/music-assistant-libby",
+  "multi_instance": true
+}
